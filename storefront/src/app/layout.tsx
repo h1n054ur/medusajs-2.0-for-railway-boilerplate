@@ -2,7 +2,7 @@ import { getBaseURL } from "@lib/util/env"
 import { Metadata } from "next"
 import { ThemeProvider } from "@/lib/theme-provider"
 import { ThemeContextProvider } from "@/lib/theme-context"
-import "styles/globals.css"
+import "@/styles/globals.css"
 
 export const metadata: Metadata = {
   metadataBase: new URL(getBaseURL()),
