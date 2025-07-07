@@ -2,9 +2,17 @@ import { Metadata } from "next"
 
 import { HeroSection } from "@/components/hero-section"
 import { FeaturesSection } from "@/components/features-section"
-import { StatsSection } from "@/components/sections/stats-section"
-import { ProductShowcase } from "@/components/sections/product-showcase"
+import { StatsSection } from "@/components/stats-section"
+import { ProductSection } from "@/components/product-section"
+import { TestimonialsCarousel } from "@/components/testimonials-carousel"
+import { PricingSection } from "@/components/pricing-section"
+import { TeamSection } from "@/components/team-section"
+import { TimelineSection } from "@/components/timeline-section"
+import { BlogSection } from "@/components/blog-section"
+import { LogoShowcase } from "@/components/logo-showcase"
+import { FaqSection } from "@/components/faq-section"
 import { NewsletterSection } from "@/components/newsletter-section"
+import { ContactSection } from "@/components/contact-section"
 import FeaturedProducts from "@modules/home/components/featured-products"
 import { getCollectionsWithProducts } from "@lib/data/collections"
 import { getRegion } from "@lib/data/regions"
@@ -41,15 +49,19 @@ export default async function Home({
       <HeroSection countryCode={countryCode} />
       <FeaturesSection />
       <StatsSection />
-      <ProductShowcase 
-        featuredProducts={featuredProducts} 
-        countryCode={countryCode} 
-        region={region}
-      />
+      <ProductSection />
       <div className="py-12">
         <FeaturedProducts collections={collections} region={region} />
       </div>
+      <TestimonialsCarousel />
+      <PricingSection />
+      <TeamSection />
+      <TimelineSection />
+      <BlogSection />
+      <LogoShowcase />
+      <FaqSection />
       <NewsletterSection />
+      <ContactSection />
     </div>
   )
 }
