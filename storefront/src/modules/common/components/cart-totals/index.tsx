@@ -2,7 +2,7 @@
 
 import { convertToLocale } from "@lib/util/money"
 import { InformationCircleSolid } from "@medusajs/icons"
-import { Tooltip } from "@medusajs/ui"
+import { Tooltip } from "@/components/ui/tooltip"
 import React from "react"
 
 type CartTotalsProps = {

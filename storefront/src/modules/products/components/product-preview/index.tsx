@@ -1,4 +1,4 @@
-import { Text } from "@medusajs/ui"
+import { Text } from "@/components/ui/text"
 
 import { getProductPrice } from "@lib/util/get-product-price"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"

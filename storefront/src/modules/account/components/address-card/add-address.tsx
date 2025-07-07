@@ -1,7 +1,8 @@
 "use client"
 
 import { Plus } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+import { Heading } from "@/components/ui/heading"
+import { Button } from "@/components/ui/button"
 import { useEffect, useState } from "react"
 import { useFormState } from "react-dom"
 

@@ -1,6 +1,8 @@
 import { RadioGroup } from "@headlessui/react"
 import { InformationCircleSolid } from "@medusajs/icons"
-import { Text, Tooltip, clx } from "@medusajs/ui"
+import { Tooltip } from "@/components/ui/tooltip"
+import { clx } from "@/lib/utils"
+import { Text } from "@/components/ui/text"
 import React from "react"
 
 import Radio from "@modules/common/components/radio"

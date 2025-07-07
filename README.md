@@ -1,103 +1,184 @@
-<p align="center">
-  <a href="https://www.medusajs.com">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://user-images.githubusercontent.com/59018053/229103275-b5e482bb-4601-46e6-8142-244f531cebdb.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg">
-      <img alt="Medusa logo" src="https://user-images.githubusercontent.com/59018053/229103726-e5b529a3-9b3f-4970-8a1f-c6af37f087bf.svg" width=100>
-    </picture>
-  </a>
-  <a href="https://railway.app/template/gkU-27?referralCode=-Yg50p">
-    <picture>
-      <source media="(prefers-color-scheme: dark)" srcset="https://railway.app/brand/logo-light.svg">
-      <source media="(prefers-color-scheme: light)" srcset="https://railway.app/brand/logo-dark.svg">
-      <img alt="Railway logo" src="https://railway.app/brand/logo-light.svg" width=100>
-    </picture>
-  </a>
-</p>
+# Claude Code Implementation Planning Prompt
 
-<h2 align="center">
-  Prebaked medusajs 2.0 monorepo
-</h2>
-<h4 align="center">
-  Backend + Storefront + postgres + redis + MinIO + MeiliSearch
-</h4>
+## Project Overview
 
-<h2 align="center">
-  <a href="https://railway.app/template/gkU-27?referralCode=-Yg50p">one-click deploy on railway!</a>
-</h2>
+I have a Railway-deployed Medusa.js boilerplate project with a separate replit-app folder in the root that contains a good implementation of shadcn/ui themes and components. I want to upgrade the Medusa storefront to use the same modern theming system and component library approach that I can see working in the replit-app. The replit-app is just for reference and will be deleted after extracting what I need.
 
-<h1 align="center">
-  Need help?<br>
-  <a href="https://funkyton.com/medusajs-2-0-is-finally-here/">Step by step deploy guide, and video instructions</a>
-</h1>
+## Project Structure Analysis Required
 
-<p align="center">
-Combine Medusa's modules for your commerce backend with the newest Next.js 14 features for a performant storefront.</p>
+First, analyze the current project structure:
 
-## About this boilerplate
-This boilerplate is a monorepo consisting of the officially released MedusaJS 2.0 backend and storefront application. It is a pre-configured, ready-to-deploy solution, modified for seamless deployment on [railway.app](https://railway.app?referralCode=-Yg50p).
+- Root Medusa.js project (Railway deployed)
+- `/replit-app` folder with existing shadcn bubblegum theme implementation
+- Identify current tech stacks for both applications
+- Document existing component libraries and dependencies
 
-Updated: to `version 2.8.4` 🥳
+## Main Objectives
 
-## Preconfigured 3rd party integrations
+1. **Upgrade Medusa Storefront**: Replace basic @medusajs/ui-preset with modern shadcn/ui theme system
+2. **Component Library Integration**: Set up shadcn/ui, magicui, and custom components in Medusa
+3. **Homepage Upgrade**: Make Medusa homepage look like the replit-app homepage (then delete replit-app)
+4. **Theme Management**: Create easy theme switching system for future customization
 
-- MinIO file storage: Replaces local file storage with MinIO cloud storage, automatically creating a 'medusa-media' bucket for your media files. [README](backend/src/modules/minio-file/README.md)
-- Resend email integration [Watch setup video](https://youtu.be/pbdZm26YDpE?si=LQTHWeZMLD4w3Ahw) - special thanks to [aleciavogel](https://github.com/aleciavogel) for Resend notification service, and react-email implementation! [README](backend/src/modules/email-notifications/README.md)
-- Stripe payment service: [Watch setup video](https://youtu.be/dcSOpIzc1Og)
-- Meilisearch integration by [Rokmohar](https://github.com/rokmohar/medusa-plugin-meilisearch): Adds powerful product search capabilities to your store. When deployed on Railway using the template, MeiliSearch is automatically configured. (For non-railway'ers: [Watch setup video](https://youtu.be/hrXcc5MjApI))
+## Required Planning Documents
 
-# /backend
+Create the following implementation planning documents:
 
-### local setup
-Video instructions: https://youtu.be/PPxenu7IjGM
+### 1. Main Implementation Plan (`IMPLEMENTATION_PLAN.md`)
 
-- `cd /backend`
-- `pnpm install` or `npm i`
-- Rename `.env.template` ->  `.env`
-- To connect to your online database from your local machine, copy the `DATABASE_URL` value auto-generated on Railway and add it to your `.env` file.
-  - If connecting to a new database, for example a local one, run `pnpm ib` or `npm run ib` to seed the database.
-- `pnpm dev` or `npm run dev`
+- Executive summary of the integration approach
+- High-level architecture overview
+- Phase breakdown with dependencies
+- Timeline estimates
+- Risk assessment and mitigation strategies
+- Success criteria and testing approach
 
-### requirements
-- **postgres database** (Automatic setup when using the Railway template)
-- **redis** (Automatic setup when using the Railway template) - fallback to simulated redis.
-- **MinIO storage** (Automatic setup when using the Railway template) - fallback to local storage.
-- **Meilisearch** (Automatic setup when using the Railway template)
+### 2. Phase-Specific Detailed Plans
 
-### commands
+#### Phase 1: Project Analysis & Setup (`phase1_analysis_setup.md`)
 
-`cd backend/`
-`npm run ib` or `pnpm ib` will initialize the backend by running migrations and seed the database with required system data.
-`npm run dev` or `pnpm dev` will start the backend (and admin dashboard frontend on `localhost:9000/app`) in development mode.
-`pnpm build && pnpm start` will compile the project and run from compiled source. This can be useful for reproducing issues on your cloud instance.
+- Complete project structure audit
+- Technology stack comparison (Medusa vs replit-app)
+- Dependencies mapping and conflict resolution
+- Development environment setup requirements
+- Git workflow and branch strategy
 
-# /storefront
+#### Phase 2: Modern Theme System Setup (`phase2_modern_theme_setup.md`)
 
-### local setup
-Video instructions: https://youtu.be/PPxenu7IjGM
+- Replace @medusajs/ui-preset with shadcn/ui CSS variables approach
+- Install bubblegum theme using provided CSS variables
+- Set up theme switcher for easy theme changes in the future
+- Configure components.json for modern shadcn/ui theming
+- Remove dependency on basic Medusa theming
 
-Install dependencies `npm i` of `pnpm i`
-Rename `.env.local.template` ->  `.env.local`
+#### Phase 3: Component Library Integration (`phase3_component_integration.md`)
 
-### requirements
-- A running backend on port 9000 is required to fetch product data and other information needed to build Next.js pages.
+- shadcn/ui components installation and configuration
+- magicui components setup and customization
+- Custom component migration strategy
+- Component documentation and usage guidelines
+- Storybook setup for component development
 
-### commands
-`cd storefront/`
-`npm run dev` or `pnpm dev` will run the storefront on uncompiled code, with hot-reloading as files are saved with changes.
+#### Phase 4: Homepage Upgrade (`phase4_homepage_upgrade.md`)
 
-## Useful resources
-- How to setup credit card payment with Stripe payment module: https://youtu.be/dcSOpIzc1Og
-- https://funkyton.com/medusajs-2-0-is-finally-here/#succuessfully-deployed-whats-next
-  
-<p align="center">
-  <a href="https://funkyton.com/">
-    <div style="text-align: center;">
-      A template by,
-      <br>
-      <picture>
-        <img alt="FUNKYTON logo" src="https://res-5.cloudinary.com/hczpmiapo/image/upload/q_auto/v1/ghost-blog-images/funkyton-logo.png" width=200>
-      </picture>
-    </div>
-  </a>
-</p>
+- Copy homepage design patterns from replit-app to Medusa storefront
+- Implement identical layout using new shadcn/ui components
+- Replace Medusa's basic homepage with modern design
+- Ensure responsive behavior and animations work correctly
+- Test theme switching on the new homepage
+
+#### Phase 5: Backend Integration (`phase5_backend_integration.md`)
+
+- Apply new theme system to Medusa admin panel
+- Update API response styling for consistency
+- Upgrade authentication flow components
+- Style dashboard and management interfaces with new components
+- Ensure admin panel matches storefront theming
+
+#### Phase 6: Testing & Deployment (`phase6_testing_deployment.md`)
+
+- Pre-deployment code validation and linting
+- Component integration verification (local development only)
+- GitHub repository setup and commit structure
+- Railway deployment pipeline configuration
+- Post-deployment testing plan (user will test after GitHub > Railway deployment)
+- Deployment verification checklist for user testing
+
+### 3. Technical Specifications (`TECHNICAL_SPECS.md`)
+
+- Detailed file structure for shared components
+- Import/export patterns for theme system
+- Configuration files setup (tailwind.config.js, etc.)
+- Package.json modifications required
+- Build process optimization
+
+### 4. Testing & Deployment Guide (`TESTING_DEPLOYMENT_GUIDE.md`)
+
+- Pre-deployment validation checklist
+- GitHub repository optimization
+- Railway deployment configuration
+- Post-deployment testing instructions for you to execute
+- User acceptance testing checklist
+- Troubleshooting guide for common deployment issues
+
+## Key Research Findings
+
+### Theme Installation Methods
+
+1. **Official shadcn/ui themes**: Available at https://ui.shadcn.com/themes - copy/paste CSS variables approach
+2. **Tweakcn.com themes**: Visual no-code theme editor for shadcn/ui components with downloadable themes
+3. **Custom theme installation**: Use `npx shadcn@latest add https://tweakcn.com/r/themes/bubblegum.json` for specific themes
+4. **Multiple theme support**: Can implement color theme selectors alongside light/dark mode using CSS variables and data attributes
+
+### Theme System Architecture
+
+1. **CSS Variables Approach**: shadcn/ui uses CSS variables for theming with cssVariables: true in components.json
+2. **next-themes Integration**: Use next-themes for dark/light mode switching with ThemeProvider
+3. **Multiple Theme Support**: Can implement 3-level customization: dark/light mode, color schemes, and border radius
+4. **Theme Switching**: shadcn's own site uses theme classes on document.body like `theme-{themeName}`
+
+### Theme System Upgrade
+
+- Replace @medusajs/ui-preset with modern shadcn/ui CSS variables approach
+- Install bubblegum theme using the provided CSS variables from paste.txt
+- Create theme switcher component for easy future theme changes
+- Set up components.json properly for CSS variables theming
+- Remove old Medusa theming dependencies
+
+### Component Library Upgrade
+
+- Replace basic Medusa components with modern shadcn/ui components
+- Extract and install magicui components from replit-app reference
+- Set up proper component architecture for easy maintenance
+- Create component documentation for team use
+- Implement component variants that work with theme switching
+
+### Homepage Modernization
+
+- Study replit-app homepage design and component usage (reference only)
+- Upgrade Medusa's basic homepage to modern design standards
+- Implement new layout using upgraded shadcn/ui components and themes
+- Ensure new homepage showcases theme switching capabilities
+- Replace all outdated Medusa homepage components
+
+### Development Workflow
+
+- Set up hot-reload for theme changes
+- Create development guidelines for team
+- Implement component testing framework
+- Design code review process for UI changes
+
+## Constraints and Considerations
+
+- Must maintain Railway deployment compatibility
+- Preserve existing Medusa e-commerce functionality
+- Ensure mobile-first responsive design
+- Optimize for performance and SEO
+- Plan for easy theme changes and future customization
+- **Reference Usage**: replit-app is reference only and will be deleted after extracting needed patterns
+- **Testing Limitation**: Claude Code cannot perform full environment testing - user will test after GitHub > Railway deployment
+
+## Deliverables Expected
+
+- Complete implementation plan with all phase documents
+- Technical architecture documentation
+- Component library setup guide
+- Pre-deployment validation procedures
+- Post-deployment testing guide for user execution
+- Migration timeline with milestones
+
+## Instructions for Claude Code
+
+1. **DO NOT EXECUTE CODE YET** - Only create planning documents
+2. First analyze the existing project structure thoroughly
+3. Plan proper theme system using CSS variables approach (cssVariables: true in components.json)
+4. Use the exact bubblegum theme CSS variables provided in the uploaded paste.txt file
+5. Create comprehensive theme switching architecture supporting multiple themes
+6. Plan integration with next-themes for dark/light mode + custom color theme context
+7. Include examples of theme provider setup, theme switcher components, and CSS integration
+8. Provide clear dependencies between phases and actionable checklists
+9. Document theme system architecture following shadcn.com's official patterns
+10. Include performance and accessibility considerations
+11. **Testing Note**: Create comprehensive testing plans but acknowledge that actual testing will occur after user deploys to GitHub > Railway (Claude Code cannot test in full environment)
+
+Please analyze the project structure and create comprehensive planning documents that focus on upgrading the Medusa.js storefront to use modern shadcn/ui theming and components. Use the replit-app as a reference for good patterns, extract the bubblegum theme CSS variables from paste.txt, and create a plan to modernize the entire Medusa frontend with easy theme switching capabilities. The replit-app folder will be deleted after extracting what's needed.

@@ -1,4 +1,5 @@
-import { Container, Text } from "@medusajs/ui"
+import { Container } from "@/components/ui/container"
+import { Text } from "@/components/ui/text"
 import { useHits, useSearchBox } from "react-instantsearch-hooks-web"
 
 import InteractiveLink from "@modules/common/components/interactive-link"

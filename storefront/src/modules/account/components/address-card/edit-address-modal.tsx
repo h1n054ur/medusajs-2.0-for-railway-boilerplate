@@ -2,7 +2,10 @@
 
 import React, { useEffect, useState } from "react"
 import { PencilSquare as Edit, Trash } from "@medusajs/icons"
-import { Button, Heading, Text, clx } from "@medusajs/ui"
+import { Text } from "@/components/ui/text"
+import { clx } from "@/lib/utils"
+import { Heading } from "@/components/ui/heading"
+import { Button } from "@/components/ui/button"
 
 import useToggleState from "@lib/hooks/use-toggle-state"
 import CountrySelect from "@modules/checkout/components/country-select"

@@ -1,4 +1,5 @@
-import { Heading, Text } from "@medusajs/ui"
+import { Text } from "@/components/ui/text"
+import { Heading } from "@/components/ui/heading"
 import Link from "next/link"
 
 import RefinementList from "@modules/store/components/refinement-list"

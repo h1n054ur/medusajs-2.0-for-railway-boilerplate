@@ -1,5 +1,7 @@
 import { Disclosure } from "@headlessui/react"
-import { Badge, Button, clx } from "@medusajs/ui"
+import { Badge } from "@/components/ui/badge"
+import { clx } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
 import { useEffect } from "react"
 
 import useToggleState from "@lib/hooks/use-toggle-state"

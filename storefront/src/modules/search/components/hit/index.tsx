@@ -1,4 +1,5 @@
-import { Container, Text } from "@medusajs/ui"
+import { Container } from "@/components/ui/container"
+import { Text } from "@/components/ui/text"
 
 import Thumbnail from "@modules/products/components/thumbnail"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"

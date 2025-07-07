@@ -1,4 +1,5 @@
-import { Container, clx } from "@medusajs/ui"
+import { Container } from "@/components/ui/container"
+import { clx } from "@/lib/utils"
 import Image from "next/image"
 import React from "react"
 

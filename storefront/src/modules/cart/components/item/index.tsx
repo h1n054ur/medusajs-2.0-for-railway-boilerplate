@@ -1,6 +1,8 @@
 "use client"
 
-import { Table, Text, clx } from "@medusajs/ui"
+import { Table } from "@/components/ui/table"
+import { clx } from "@/lib/utils"
+import { Text } from "@/components/ui/text"
 
 import { updateLineItem } from "@lib/data/cart"
 import { HttpTypes } from "@medusajs/types"

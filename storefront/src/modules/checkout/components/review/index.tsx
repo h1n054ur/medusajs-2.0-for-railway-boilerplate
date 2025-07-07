@@ -1,6 +1,8 @@
 "use client"
 
-import { Heading, Text, clx } from "@medusajs/ui"
+import { clx } from "@/lib/utils"
+import { Heading } from "@/components/ui/heading"
+import { Text } from "@/components/ui/text"
 
 import PaymentButton from "../payment-button"
 import { useSearchParams } from "next/navigation"

@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@/lib/utils"
 import React from "react"
 import {
   UseHitsProps,

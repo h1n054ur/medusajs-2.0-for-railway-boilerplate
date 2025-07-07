@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@/lib/utils"
 
 const Divider = ({ className }: { className?: string }) => (
   <div

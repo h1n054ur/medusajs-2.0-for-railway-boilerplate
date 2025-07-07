@@ -1,4 +1,4 @@
-import { Heading } from "@medusajs/ui"
+import { Heading } from "@/components/ui/heading"
 import { cookies } from "next/headers"
 
 import CartTotals from "@modules/common/components/cart-totals"

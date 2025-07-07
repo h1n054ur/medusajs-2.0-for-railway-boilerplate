@@ -1,0 +1,199 @@
+/* Medusa Admin Theme Overrides - Bubblegum Theme */
+
+:root {
+  /* Override default Medusa admin colors with bubblegum theme */
+  --medusa-bg-base: #f6e6ee;
+  --medusa-bg-subtle: #fdedc9;
+  --medusa-bg-component: #ffffff;
+  --medusa-fg-base: #5b5b5b;
+  --medusa-fg-subtle: #7a7a7a;
+  --medusa-border-base: #d04f99;
+  --medusa-border-strong: #be185d;
+  --medusa-tag-primary-bg: #d04f99;
+  --medusa-tag-primary-fg: #ffffff;
+  --medusa-tag-primary-border: #be185d;
+  --medusa-button-primary-bg: #d04f99;
+  --medusa-button-primary-fg: #ffffff;
+  --medusa-button-primary-border: #be185d;
+  --medusa-accent-base: #fbe2a7;
+  --medusa-accent-fg: #333333;
+  
+  /* Custom admin properties */
+  --admin-font-family: 'Poppins', sans-serif;
+  --admin-radius: 0.4rem;
+  --admin-shadow: 3px 3px 0px 0px hsl(325.78 58.18% 56.86% / 0.50);
+}
+
+.dark {
+  /* Dark mode overrides */
+  --medusa-bg-base: #12242e;
+  --medusa-bg-subtle: #1c2e38;
+  --medusa-bg-component: #24272b;
+  --medusa-fg-base: #f3e3ea;
+  --medusa-fg-subtle: #e4a2b1;
+  --medusa-border-base: #324859;
+  --medusa-border-strong: #50afb6;
+  --medusa-tag-primary-bg: #fbe2a7;
+  --medusa-tag-primary-fg: #12242e;
+  --medusa-tag-primary-border: #50afb6;
+  --medusa-button-primary-bg: #50afb6;
+  --medusa-button-primary-fg: #12242e;
+  --medusa-button-primary-border: #50afb6;
+  --medusa-accent-base: #324859;
+  --medusa-accent-fg: #f3e3ea;
+  
+  --admin-shadow: 3px 3px 0px 0px hsl(195 61% 52% / 0.30);
+}
+
+/* Global admin styling */
+.medusa-admin-root {
+  font-family: var(--admin-font-family);
+}
+
+/* Button overrides */
+.medusa-admin-button,
+[data-ui="button"] {
+  border-radius: var(--admin-radius) !important;
+  font-family: var(--admin-font-family) !important;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.medusa-admin-button:hover,
+[data-ui="button"]:hover {
+  transform: translateY(-1px);
+  box-shadow: var(--admin-shadow);
+}
+
+/* Card overrides */
+.medusa-admin-card,
+[data-ui="card"] {
+  border-radius: var(--admin-radius) !important;
+  box-shadow: var(--admin-shadow) !important;
+  transition: all 0.2s ease;
+  border: 1px solid var(--medusa-border-base);
+}
+
+.medusa-admin-card:hover,
+[data-ui="card"]:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0px 0px var(--medusa-border-base);
+}
+
+/* Input overrides */
+.medusa-admin-input,
+[data-ui="input"] {
+  border-radius: var(--admin-radius) !important;
+  font-family: var(--admin-font-family) !important;
+  border: 1px solid var(--medusa-border-base);
+}
+
+.medusa-admin-input:focus,
+[data-ui="input"]:focus {
+  border-color: var(--medusa-tag-primary-bg);
+  box-shadow: 0 0 0 2px hsl(325.78 58.18% 56.86% / 0.20);
+}
+
+/* Table overrides */
+.medusa-admin-table,
+[data-ui="table"] {
+  border-radius: var(--admin-radius) !important;
+  font-family: var(--admin-font-family) !important;
+}
+
+.medusa-admin-table th,
+[data-ui="table"] th {
+  background-color: var(--medusa-bg-subtle);
+  color: var(--medusa-fg-base);
+  font-weight: 600;
+}
+
+.medusa-admin-table td,
+[data-ui="table"] td {
+  border-bottom: 1px solid var(--medusa-border-base);
+}
+
+/* Badge overrides */
+.medusa-admin-badge,
+[data-ui="badge"] {
+  border-radius: var(--admin-radius) !important;
+  font-family: var(--admin-font-family) !important;
+  font-weight: 500;
+}
+
+/* Navigation overrides */
+.medusa-admin-sidebar {
+  background-color: var(--medusa-bg-subtle) !important;
+  border-right: 1px solid var(--medusa-border-base);
+}
+
+.medusa-admin-nav-item {
+  border-radius: var(--admin-radius) !important;
+  font-family: var(--admin-font-family) !important;
+  transition: all 0.2s ease;
+}
+
+.medusa-admin-nav-item:hover {
+  background-color: var(--medusa-tag-primary-bg);
+  color: var(--medusa-tag-primary-fg);
+  transform: translateX(2px);
+}
+
+.medusa-admin-nav-item.active {
+  background-color: var(--medusa-tag-primary-bg);
+  color: var(--medusa-tag-primary-fg);
+  box-shadow: var(--admin-shadow);
+}
+
+/* Header overrides */
+.medusa-admin-header {
+  background-color: var(--medusa-bg-base) !important;
+  border-bottom: 1px solid var(--medusa-border-base);
+  backdrop-filter: blur(8px);
+}
+
+/* Modal overrides */
+.medusa-admin-modal,
+[data-ui="modal"] {
+  border-radius: var(--admin-radius) !important;
+  font-family: var(--admin-font-family) !important;
+  box-shadow: var(--admin-shadow) !important;
+}
+
+/* Dropdown overrides */
+.medusa-admin-dropdown,
+[data-ui="dropdown"] {
+  border-radius: var(--admin-radius) !important;
+  font-family: var(--admin-font-family) !important;
+  border: 1px solid var(--medusa-border-base);
+  box-shadow: var(--admin-shadow);
+}
+
+/* Loading states */
+.medusa-admin-loading {
+  color: var(--medusa-tag-primary-bg);
+}
+
+/* Custom animations */
+@keyframes admin-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+.medusa-admin-pulse {
+  animation: admin-pulse 2s infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .medusa-admin-card,
+  [data-ui="card"] {
+    box-shadow: 2px 2px 0px 0px var(--medusa-border-base) !important;
+  }
+  
+  .medusa-admin-button:hover,
+  [data-ui="button"]:hover {
+    transform: none;
+    box-shadow: 2px 2px 0px 0px var(--medusa-border-base);
+  }
+}

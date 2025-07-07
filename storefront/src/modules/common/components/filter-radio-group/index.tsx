@@ -1,5 +1,8 @@
 import { EllipseMiniSolid } from "@medusajs/icons"
-import { Label, RadioGroup, Text, clx } from "@medusajs/ui"
+import { Label } from "@/components/ui/label"
+import { RadioGroup } from "@/components/ui/radio-group"
+import { clx } from "@/lib/utils"
+import { Text } from "@/components/ui/text"
 
 type FilterRadioGroupProps = {
   title: string

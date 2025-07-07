@@ -2,7 +2,10 @@
 
 import { RadioGroup } from "@headlessui/react"
 import { CheckCircleSolid } from "@medusajs/icons"
-import { Button, Heading, Text, clx } from "@medusajs/ui"
+import { clx } from "@/lib/utils"
+import { Heading } from "@/components/ui/heading"
+import { Text } from "@/components/ui/text"
+import { Button } from "@/components/ui/button"
 
 import Divider from "@modules/common/components/divider"
 import Radio from "@modules/common/components/radio"

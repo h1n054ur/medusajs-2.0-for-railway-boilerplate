@@ -1,32 +1,34 @@
-import { Github } from "@medusajs/icons"
-import { Button, Heading } from "@medusajs/ui"
+import { Button } from "@/components/ui/button"
+import { Heading } from "@/components/ui/heading"
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+    <div className="h-[75vh] w-full border-b border-border relative bg-background">
       <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center small:p-32 gap-6">
-        <span>
+        <div className="space-y-4">
           <Heading
             level="h1"
-            className="text-3xl leading-10 text-ui-fg-base font-normal"
+            className="text-3xl leading-10 font-normal"
           >
-            Well done! You have successfully deployed your Medusa 2.0 store on Railway!
+            Well done! You have successfully deployed your Medusa 2.0 store with Modern Theme!
           </Heading>
           <Heading
             level="h2"
-            className="text-3xl leading-10 text-ui-fg-subtle font-normal"
+            variant="muted"
+            className="text-xl leading-8 font-normal"
           >
-            Need help customizing your store?
+            Theme switching is now enabled - try the buttons in the top right!
           </Heading>
-        </span>
-        <a
-          href="https://funkyton.com/medusajs-2-0-is-finally-here/"
-          target="_blank"
-        >
-          <h1 style={{ textDecoration: "underline" }}>
+        </div>
+        <Button asChild variant="outline" className="mt-4">
+          <a
+            href="https://funkyton.com/medusajs-2-0-is-finally-here/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Visit the tutorial
-          </h1>
-        </a>
+          </a>
+        </Button>
       </div>
     </div>
   )

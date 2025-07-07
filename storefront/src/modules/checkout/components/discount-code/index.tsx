@@ -1,6 +1,11 @@
 "use client"
 
-import { Badge, Heading, Input, Label, Text, Tooltip } from "@medusajs/ui"
+import { Badge } from "@/components/ui/badge"
+import { Input } from "@/components/ui/input"
+import { Label } from "@/components/ui/label"
+import { Tooltip } from "@/components/ui/tooltip"
+import { Heading } from "@/components/ui/heading"
+import { Text } from "@/components/ui/text"
 import React from "react"
 import { useFormState } from "react-dom"
 

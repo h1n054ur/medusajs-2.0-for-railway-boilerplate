@@ -1,6 +1,7 @@
 "use client"
 
-import { IconBadge, clx } from "@medusajs/ui"
+import { IconBadge } from "@/components/ui/icon-badge"
+import { clx } from "@/lib/utils"
 import {
   SelectHTMLAttributes,
   forwardRef,

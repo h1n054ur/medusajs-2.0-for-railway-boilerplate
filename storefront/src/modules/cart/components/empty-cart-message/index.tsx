@@ -1,4 +1,5 @@
-import { Heading, Text } from "@medusajs/ui"
+import { Heading } from "@/components/ui/heading"
+import { Text } from "@/components/ui/text"
 
 import InteractiveLink from "@modules/common/components/interactive-link"
 

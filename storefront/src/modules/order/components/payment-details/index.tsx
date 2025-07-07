@@ -1,4 +1,6 @@
-import { Container, Heading, Text } from "@medusajs/ui"
+import { Container } from "@/components/ui/container"
+import { Heading } from "@/components/ui/heading"
+import { Text } from "@/components/ui/text"
 
 import { isStripe, paymentInfoMap } from "@lib/constants"
 import Divider from "@modules/common/components/divider"

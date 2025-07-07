@@ -1,4 +1,4 @@
-import { clx } from "@medusajs/ui"
+import { clx } from "@/lib/utils"
 
 import { getPercentageDiff } from "@lib/util/get-precentage-diff"
 import { getPricesForVariant } from "@lib/util/get-product-price"
