@@ -1,7 +1,6 @@
 import { getBaseURL } from "@lib/util/env"
 import { Metadata } from "next"
 import { ThemeProvider } from "@/lib/theme-provider"
-import { ThemeContextProvider } from "@/lib/theme-context"
 import "@/styles/globals.css"
 
 export const metadata: Metadata = {
@@ -18,9 +17,7 @@ export default function RootLayout(props: { children: React.ReactNode }) {
           enableSystem={false}
           disableTransitionOnChange
         >
-          <ThemeContextProvider>
-            <main className="relative">{props.children}</main>
-          </ThemeContextProvider>
+          <main className="relative">{props.children}</main>
         </ThemeProvider>
       </body>
     </html>
