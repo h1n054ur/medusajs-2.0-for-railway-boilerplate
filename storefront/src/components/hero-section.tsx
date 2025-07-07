@@ -4,6 +4,11 @@ import { motion } from 'framer-motion';
 import { ArrowRight, ShoppingBag, Sparkles } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
+import {
+  AnimatedSpan,
+  Terminal,
+  TypingAnimation,
+} from '@/components/magicui/terminal';
 import Link from 'next/link';
 
 interface HeroSectionProps {
@@ -99,7 +104,7 @@ export function HeroSection({ countryCode = 'us' }: HeroSectionProps) {
             </div>
           </motion.div>
 
-          {/* Product Preview */}
+          {/* Terminal Demo */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -107,25 +112,37 @@ export function HeroSection({ countryCode = 'us' }: HeroSectionProps) {
           >
             <div className="flex justify-center">
               <div className="hover-lift w-full max-w-2xl rounded-2xl shadow-2xl">
-                <div className="bg-gradient-to-r from-primary/10 to-secondary/10 p-8 rounded-2xl">
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                    <div className="bg-background/50 backdrop-blur rounded-lg p-6 text-center">
-                      <ShoppingBag className="w-8 h-8 mx-auto mb-3 text-primary" />
-                      <h3 className="font-semibold mb-2">Premium Quality</h3>
-                      <p className="text-sm text-muted-foreground">Carefully curated products</p>
-                    </div>
-                    <div className="bg-background/50 backdrop-blur rounded-lg p-6 text-center">
-                      <Sparkles className="w-8 h-8 mx-auto mb-3 text-primary" />
-                      <h3 className="font-semibold mb-2">Modern Design</h3>
-                      <p className="text-sm text-muted-foreground">Beautiful and functional</p>
-                    </div>
-                    <div className="bg-background/50 backdrop-blur rounded-lg p-6 text-center">
-                      <ArrowRight className="w-8 h-8 mx-auto mb-3 text-primary" />
-                      <h3 className="font-semibold mb-2">Fast Delivery</h3>
-                      <p className="text-sm text-muted-foreground">Quick and reliable shipping</p>
-                    </div>
-                  </div>
-                </div>
+                <Terminal className="w-full min-h-[400px]">
+                  <TypingAnimation>&gt; npx create-medusa-store my-store</TypingAnimation>
+
+                  <AnimatedSpan delay={1500} className="text-green-500">
+                    <span>✔ Preflight checks.</span>
+                  </AnimatedSpan>
+
+                  <AnimatedSpan delay={2000} className="text-green-500">
+                    <span>✔ Verifying framework. Found Next.js + Medusa.</span>
+                  </AnimatedSpan>
+
+                  <AnimatedSpan delay={2500} className="text-green-500">
+                    <span>✔ Validating Tailwind CSS.</span>
+                  </AnimatedSpan>
+
+                  <AnimatedSpan delay={3000} className="text-green-500">
+                    <span>✔ Installing ShadCN components.</span>
+                  </AnimatedSpan>
+
+                  <AnimatedSpan delay={3500} className="text-green-500">
+                    <span>✔ Setting up Magic UI animations.</span>
+                  </AnimatedSpan>
+
+                  <AnimatedSpan delay={4000} className="text-green-500">
+                    <span>✔ Configuring bubblegum theme.</span>
+                  </AnimatedSpan>
+
+                  <TypingAnimation delay={4500} className="text-muted-foreground">
+                    Success! E-commerce store ready. 🚀
+                  </TypingAnimation>
+                </Terminal>
               </div>
             </div>
           </motion.div>
