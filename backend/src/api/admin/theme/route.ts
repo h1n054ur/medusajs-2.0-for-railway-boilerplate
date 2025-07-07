@@ -1,6 +1,14 @@
 import { MedusaRequest, MedusaResponse } from "@medusajs/framework"
 import { adminThemeConfig, generateThemeVariables } from "../../../admin/theme-config"
 
+interface ThemePreferencesBody {
+  userId: string
+  themePreferences: {
+    mode?: 'light' | 'dark'
+    colorScheme?: string
+  }
+}
+
 export async function GET(req: MedusaRequest, res: MedusaResponse) {
   try {
     // Return theme configuration for admin panel
@@ -28,7 +36,7 @@ export async function GET(req: MedusaRequest, res: MedusaResponse) {
   }
 }
 
-export async function POST(req: MedusaRequest, res: MedusaResponse) {
+export async function POST(req: MedusaRequest<ThemePreferencesBody>, res: MedusaResponse) {
   try {
     // Update theme preferences for admin user
     const { userId, themePreferences } = req.body

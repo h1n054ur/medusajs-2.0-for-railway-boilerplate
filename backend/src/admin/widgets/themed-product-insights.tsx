@@ -168,7 +168,7 @@ const ThemedProductInsights = () => {
 
 // Widget configuration - will appear on product detail pages
 export const config = defineWidgetConfig({
-  zone: "product.details.after",
+  zone: ["product.details.after"],
 })
 
 export default ThemedProductInsights

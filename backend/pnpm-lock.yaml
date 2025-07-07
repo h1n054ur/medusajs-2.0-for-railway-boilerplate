@@ -11,6 +11,9 @@ importers:
       '@medusajs/admin-sdk':
         specifier: latest
         version: 2.8.4
+      '@medusajs/admin-shared':
+        specifier: ^2.8.6
+        version: 2.8.6
       '@medusajs/cli':
         specifier: latest
         version: 2.8.4(@mikro-orm/core@6.4.3)(@mikro-orm/knex@6.4.3(@mikro-orm/core@6.4.3)(pg@8.16.0))(@mikro-orm/migrations@6.4.3(@mikro-orm/core@6.4.3)(@types/node@20.19.0)(pg@8.16.0))(@mikro-orm/postgresql@6.4.3(@mikro-orm/core@6.4.3))(awilix@8.0.1)(ioredis@5.6.1)(pg@8.16.0)(vite@5.4.19(@types/node@20.19.0))
@@ -1191,6 +1194,9 @@ packages:
 
   '@medusajs/admin-shared@2.8.4':
     resolution: {integrity: sha512-jc6NSkB4+xEmbrx7fS6s9jd63sttxReVu8xOR2M8C0NVYWVQQwPUKoyK6ff4OUytG90gPqAmf6oHVD7wWvXMMA==}
+
+  '@medusajs/admin-shared@2.8.6':
+    resolution: {integrity: sha512-OxoZ7mvbZRv7tR3k3d3Em62zm2VeiyRJsWj+l/ggz71Ayf9953HKulcGC/ZxYZGa7suuj9/LZoEi8n+OWIIAxQ==}
 
   '@medusajs/admin-vite-plugin@2.8.4':
     resolution: {integrity: sha512-qGgc4nG+HyOcMHp5WzmVz86nBW6N0jFH6UgGaBSCIkMhC+OA224KCdfJnJLGBXcUgVSw5U5tE/xQtfNCoevslw==}
@@ -8809,6 +8815,8 @@ snapshots:
       zod: 3.22.4
 
   '@medusajs/admin-shared@2.8.4': {}
+
+  '@medusajs/admin-shared@2.8.6': {}
 
   '@medusajs/admin-vite-plugin@2.8.4(vite@5.4.19(@types/node@20.19.0))':
     dependencies:

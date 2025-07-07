@@ -22,11 +22,12 @@
   },
   "dependencies": {
     "@medusajs/admin-sdk": "latest",
+    "@medusajs/admin-shared": "^2.8.6",
     "@medusajs/cli": "latest",
     "@medusajs/core-flows": "latest",
+    "@medusajs/dashboard": "latest",
     "@medusajs/framework": "latest",
     "@medusajs/medusa": "latest",
-    "@medusajs/dashboard": "latest",
     "@medusajs/notification-sendgrid": "latest",
     "@medusajs/payment-stripe": "latest",
     "@medusajs/workflow-engine-redis": "latest",

@@ -145,7 +145,7 @@ const ThemedDashboardStats = () => {
 
 // Widget configuration - will appear on the dashboard home page
 export const config = defineWidgetConfig({
-  zone: "dashboard.after",
+  zone: ["dashboard.after"],
 })
 
 export default ThemedDashboardStats
